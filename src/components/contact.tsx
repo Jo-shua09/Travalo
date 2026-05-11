@@ -65,7 +65,7 @@ export function Contact() {
       <footer className="mx-auto mt-16 w-[min(94%,1200px)]">
         <div className="grid gap-10 border-t border-border pt-12 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Logo className="h-16 w-auto" />
+            <Logo className="h-14 w-auto" />
             <p className="mt-4 max-w-md text-sm text-muted-foreground">
               Travola Global Consults Ltd - connecting dreams through transparent, dependable,
               tech-driven travel consulting.
