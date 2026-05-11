@@ -1,6 +1,6 @@
 # Travola Global Consults
 
-Welcome to the official web application for **Travola Global Consults** — connecting dreams through transparent, dependable, tech-driven travel consulting.
+Welcome to the official web application for **Travola Global Consults** - connecting dreams through transparent, dependable, tech-driven travel consulting.
 
 ## 🚀 Tech Stack
 

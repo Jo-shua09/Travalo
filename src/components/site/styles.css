@@ -54,6 +54,10 @@
   --shadow-card: 0 10px 30px -12px color-mix(in oklab, oklch(0.18 0.04 275) 18%, transparent);
   --shadow-glow: 0 0 80px color-mix(in oklab, oklch(0.5 0.24 295) 40%, transparent);
 
+  --shimmer-gradient-start: var(--foreground); /* Dark for light background */
+  --shimmer-gradient-mid: var(--primary-glow); /* Bright accent */
+  --shimmer-gradient-end: var(--foreground); /* Dark for light background */
+
   --chart-1: oklch(0.32 0.19 282);
   --chart-2: oklch(0.55 0.2 290);
   --chart-3: oklch(0.7 0.15 295);
@@ -90,6 +94,10 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 12%);
   --ring: oklch(0.65 0.24 290);
+
+  --shimmer-gradient-start: var(--foreground); /* Light for dark background */
+  --shimmer-gradient-mid: var(--primary-glow); /* Bright accent */
+  --shimmer-gradient-end: var(--foreground); /* Light for dark background */
 }
 
 @theme inline {
@@ -255,9 +263,9 @@
   .shimmer-text {
     background: linear-gradient(
       90deg,
-      oklch(0.97 0.005 280) 0%,
-      oklch(0.7 0.18 290) 50%,
-      oklch(0.97 0.005 280) 100%
+      var(--shimmer-gradient-start) 0%,
+      var(--shimmer-gradient-mid) 50%,
+      var(--shimmer-gradient-end) 100%
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;
