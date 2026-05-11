@@ -43,7 +43,7 @@ export function Navbar() {
             }`}
           >
             <a href="#top" className="flex items-center gap-2">
-              <Logo className="h-12 w-auto sm:h-14" />
+              <Logo className="h-10 w-auto sm:h-12" />
             </a>
             <nav className="hidden items-center gap-7 lg:flex">
               {links.map((l) => (
