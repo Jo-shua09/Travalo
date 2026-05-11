@@ -58,7 +58,7 @@ export function Testimonials() {
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { clientWidth, scrollLeft } = scrollRef.current;
-      const scrollAmount = clientWidth > 768 ? clientWidth / 2 : clientWidth * 0.8;
+      const scrollAmount = clientWidth > 768 ? clientWidth / 2 : clientWidth * 1.1;
       scrollRef.current.scrollTo({
         left: scrollLeft + (direction === "right" ? scrollAmount : -scrollAmount),
         behavior: "smooth",
