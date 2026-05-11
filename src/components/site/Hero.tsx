@@ -28,7 +28,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="mx-auto w-[min(1200px,92%)] pt-32 pb-20 md:pt-24 md:pb-28">
+      <div className="mx-auto w-[min(1200px,92%)] pt-20 pb-20 md:pt-24 md:pb-28">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mt-6 font-display text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
             <span className="block">Connecting Dreams,</span>
