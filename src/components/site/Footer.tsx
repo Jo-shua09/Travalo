@@ -81,7 +81,7 @@ export function Footer() {
                 info@travolaglobalconsults.com
               </a>
             </li>
-            <li>Mon – Fri · 9:00 AM – 5:00 PM</li>
+            <li>Mon – Fri · 9:00 AM – 6:00 PM</li>
           </ul>
         </div>
       </div>
