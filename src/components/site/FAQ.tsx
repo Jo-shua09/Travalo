@@ -65,10 +65,10 @@ export function FAQ() {
           {faqs.map((faq, i) => (
             <Reveal key={i} delay={i * 80}>
               <details className="group rounded-xl border border-border bg-card p-5 shadow-card transition-all duration-300 open:border-primary-glow/40 open:shadow-lg">
-                <summary className="flex cursor-pointer items-center justify-between text-base font-semibold text-foreground transition-colors group-hover:text-primary-glow">
+                <summary className="flex cursor-pointer items-center justify-between text-[15px] font-semibold text-foreground transition-colors group-hover:text-primary-glow md:text-base">
                   {faq.question}
                   <svg
-                    className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-180 group-open:text-primary"
+                    className="ml-4 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-180 group-open:text-primary"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -81,7 +81,7 @@ export function FAQ() {
                     />
                   </svg>
                 </summary>
-                <div className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                <div className="mt-4 text-[13px] leading-relaxed text-muted-foreground md:text-sm">
                   {faq.answer}
                 </div>
               </details>
