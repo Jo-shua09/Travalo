@@ -1,69 +1,54 @@
-# React + TypeScript + Vite
+# Travola Global Consults
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official web application for **Travola Global Consults** — connecting dreams through transparent, dependable, tech-driven travel consulting.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is built using modern web technologies:
 
-## Expanding the ESLint configuration
+- **Framework:** [React 19](https://react.dev/)
+- **Routing:** [TanStack Router](https://tanstack.com/router/latest)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Components:** [Radix UI](https://www.radix-ui.com/) & [Lucide React](https://lucide.dev/) (Icons)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Prerequisites
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Make sure you have [Node.js](https://nodejs.org/) installed (version 18+ is recommended).
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Installation & Setup
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository:**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   ```bash
+   git clone <your-repo-url>
+   cd Travola
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. **Install dependencies:**
+   Using npm:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```bash
+   npm install
+   ```
+
+   _(Alternatively, you can use `yarn install`, `pnpm install`, or `bun install` depending on your package manager of choice)._
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   The app will be running at `http://localhost:8080`.
+
+## 📜 Available Scripts
+
+- `npm run dev` - Starts the Vite development server.
+- `npm run build` - Builds the application for production.
+- `npm run preview` - Locally preview the production build.
+- `npm run lint` - Runs ESLint to check for code quality issues.
+- `npm run format` - Formats the codebase using Prettier.
+
+## 🌍 Deployment
+
+This project is optimized for deployment on **Vercel**. A `vercel.json` configuration is included to ensure client-side routing works perfectly out of the box.
