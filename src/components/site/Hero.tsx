@@ -32,7 +32,7 @@ export function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mt-6 font-display text-[clamp(2.25rem,6vw,4.5rem)] font-bold leading-[1.1] tracking-tight text-balance">
             <span className="block">Connecting Dreams,</span>
-            <span className="block shimmer-text text-foreground">Simplifying Journeys.</span>
+            <span className="block text-primary">Simplifying Journeys.</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-foreground md:text-lg">

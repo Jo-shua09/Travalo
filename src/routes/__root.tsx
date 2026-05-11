@@ -1,5 +1,12 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Outlet, Link, createRootRouteWithContext, useRouter } from "@tanstack/react-router";
+import {
+  Outlet,
+  Link,
+  createRootRouteWithContext,
+  useRouter,
+  HeadContent,
+  Scripts,
+} from "@tanstack/react-router";
 import { PageLoader } from "@/components/spinner";
 
 import "../styles.css";
@@ -66,6 +73,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
   pendingComponent: PageLoader,
+  head: () => ({
+    meta: [
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        property: "og:site_name",
+        content: "Travola Global Consults",
+      },
+      {
+        property: "og:type",
+        content: "website",
+      },
+    ],
+  }),
 });
 
 function RootComponent() {
@@ -73,7 +96,9 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <HeadContent />
       <Outlet />
+      <Scripts />
     </QueryClientProvider>
   );
 }
