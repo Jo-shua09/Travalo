@@ -58,7 +58,7 @@ export function Testimonials() {
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { clientWidth, scrollLeft } = scrollRef.current;
-      const scrollAmount = clientWidth > 768 ? clientWidth / 2 : clientWidth * 1.1;
+      const scrollAmount = clientWidth > 768 ? clientWidth / 2 : clientWidth * 0.8;
       scrollRef.current.scrollTo({
         left: scrollLeft + (direction === "right" ? scrollAmount : -scrollAmount),
         behavior: "smooth",
@@ -109,7 +109,7 @@ export function Testimonials() {
             <Reveal
               key={r.name}
               delay={(i % 4) * 80}
-              className="w-[85vw] max-w-md shrink-0 snap-center md:w-[400px]"
+              className="w-[92vw] max-w-md shrink-0 snap-center md:w-[400px]"
             >
               <figure className="hover-lift flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-6 shadow-card md:p-8">
                 <div>
