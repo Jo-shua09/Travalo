@@ -2,10 +2,11 @@ import {
   ArrowUpRight,
   Plane,
   FileCheck2,
-  Briefcase,
   Stamp,
   ShieldCheck,
-  CalendarClock,
+  MessageCircle,
+  Building2,
+  GraduationCap,
 } from "lucide-react";
 import visaImg from "@/assets/service-visa.jpg";
 import flightImg from "@/assets/service-flight.jpg";
@@ -60,33 +61,43 @@ export function Services() {
                 </div>
                 <div>
                   <h3 className="font-display text-2xl font-bold tracking-tight md:text-4xl">
-                    Visa Consulting & Processing
+                    Professional Visa Processing Assistance
                   </h3>
-                  <p className="mt-3 max-w-md text-sm text-white/70 md:text-base">
-                    Tourist, study, business and family visas across UK, USA, Schengen, Canada, UAE
-                    & more - with industry-leading first-try approval rates.
+                  <p className="mt-3 max-w-lg text-sm leading-relaxed text-white/70 md:text-base">
+                    We provide reliable and professional assistance throughout the visa application
+                    process, helping clients prepare accurate documentation, complete application
+                    forms correctly, and present strong applications that align with immigration
+                    requirements. Our goal is to simplify the process and minimize avoidable errors
+                    or delays.
                   </p>
-                  <div className="mt-6 grid grid-cols-3 gap-4 border-t border-white/10 pt-5 text-left">
-                    {[
-                      { k: "98%", v: "Approval rate" },
-                      { k: "60+", v: "Destinations" },
-                      { k: "1k+", v: "Travelers" },
-                    ].map((s) => (
-                      <div key={s.v}>
-                        <div className="font-display text-xl font-bold md:text-2xl">{s.k}</div>
-                        <div className="text-[11px] uppercase tracking-wider text-white/55">
-                          {s.v}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             </article>
           </Reveal>
 
-          {/* Flight & hotel */}
+          {/* Visa Consultation */}
           <Reveal delay={80} className="md:col-span-2">
+            <article className="hover-lift group relative h-full overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card">
+              <div className="flex items-center justify-between">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <MessageCircle className="h-5 w-5" />
+                </span>
+                <ArrowUpRight className="h-5 w-5 text-muted-foreground transition group-hover:text-primary" />
+              </div>
+              <h3 className="mt-5 font-display text-xl font-bold tracking-tight text-foreground">
+                Visa Consultation
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Our expert consultation services are designed to guide clients on the most suitable
+                visa options based on their travel purpose, eligibility, and personal circumstances.
+                We offer personalized advice on application procedures, supporting documents, travel
+                history, sponsorship, and overall visa strategy.
+              </p>
+            </article>
+          </Reveal>
+
+          {/* Flight Ticketing */}
+          <Reveal delay={120} className="md:col-span-2">
             <article className="hover-lift group relative h-full overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card">
               <div className="flex items-center justify-between">
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
@@ -95,11 +106,13 @@ export function Services() {
                 <ArrowUpRight className="h-5 w-5 text-muted-foreground transition group-hover:text-primary" />
               </div>
               <h3 className="mt-5 font-display text-xl font-bold tracking-tight text-foreground">
-                Flight & Hotel Reservations
+                Flight Ticketing
               </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Cost-effective bookings for individuals and groups, plus flexible accommodation
-                across global hubs.
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                We assist clients with local and international flight reservations, offering
+                convenient and competitive travel options tailored to their schedules and budgets.
+                Our team helps secure suitable routes, travel dates, and fare options for seamless
+                travel planning.
               </p>
               <img
                 src={flightImg}
@@ -113,28 +126,30 @@ export function Services() {
             </article>
           </Reveal>
 
-          {/* Documentation */}
-          <Reveal delay={120} className="md:col-span-2">
-            <article className="hover-lift group relative h-full overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card">
+          {/* Hotel Booking */}
+          <Reveal delay={160} className="md:col-span-2">
+            <article className="hover-lift group relative h-full overflow-hidden rounded-3xl border border-border bg-gradient-soft p-6 shadow-card">
               <div className="flex items-center justify-between">
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                  <FileCheck2 className="h-5 w-5" />
+                  <Building2 className="h-5 w-5" />
                 </span>
                 <ArrowUpRight className="h-5 w-5 text-muted-foreground transition group-hover:text-primary" />
               </div>
               <h3 className="mt-5 font-display text-xl font-bold tracking-tight text-foreground">
-                Documentation Advisory
+                Hotel Booking
               </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Professional preparation, review and organization of every document - done right the
-                first time.
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                We provide hotel reservation services for travelers seeking comfortable and secure
+                accommodation options abroad. Whether for tourism, business, study, or family
+                visits, we help clients book suitable hotels that align with their preferences and
+                travel plans.
               </p>
             </article>
           </Reveal>
 
-          {/* Corporate */}
-          <Reveal delay={160} className="md:col-span-2">
-            <article className="hover-lift group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-[oklch(0.16_0.04_275)] p-6 text-white shadow-card">
+          {/* Student Admission and Visa Assistance */}
+          <Reveal delay={200} className="md:col-span-4">
+            <article className="hover-lift group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-[oklch(0.16_0.04_275)] p-6 text-white shadow-card md:p-8">
               <img
                 src={corpImg}
                 alt=""
@@ -144,26 +159,29 @@ export function Services() {
                 height={1024}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-transparent to-transparent" />
-              <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-[oklch(0.16_0.04_275)]/80 to-transparent" />
+              <div className="relative h-full flex flex-col justify-center">
                 <div className="flex items-center justify-between">
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 backdrop-blur">
-                    <Briefcase className="h-5 w-5" />
+                    <GraduationCap className="h-5 w-5" />
                   </span>
                   <ArrowUpRight className="h-5 w-5 transition group-hover:rotate-12" />
                 </div>
-                <h3 className="mt-8 font-display text-xl font-bold tracking-tight">
-                  Corporate Travel Management
+                <h3 className="mt-6 font-display text-2xl font-bold tracking-tight md:text-3xl">
+                  Student Admission and Visa Assistance
                 </h3>
-                <p className="mt-2 max-w-xs text-sm text-white/75">
-                  Streamlined solutions for teams managing frequent or large-scale travel.
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/80 md:text-base">
+                  We support prospective international students with school applications, admission
+                  processing, and student visa guidance. From selecting suitable institutions and
+                  programs to preparing admission and visa documentation, we assist students
+                  throughout the entire study abroad process.
                 </p>
               </div>
             </article>
           </Reveal>
 
           {/* Insurance */}
-          <Reveal delay={200} className="md:col-span-2">
+          <Reveal delay={240} className="md:col-span-3">
             <article className="hover-lift group relative h-full overflow-hidden rounded-3xl border border-border bg-gradient-soft p-6 shadow-card">
               <div className="flex items-center justify-between">
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
@@ -174,8 +192,32 @@ export function Services() {
               <h3 className="mt-5 font-display text-xl font-bold tracking-tight text-foreground">
                 Travel Insurance
               </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Reliable protection against the unexpected - vetted partners, instant certificates.
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                We help clients obtain valid travel insurance policies that meet embassy and
+                international travel requirements. Our travel insurance solutions provide coverage
+                for medical emergencies, trip interruptions, and other unforeseen travel-related
+                situations.
+              </p>
+            </article>
+          </Reveal>
+
+          {/* Travel Documents Assistance */}
+          <Reveal delay={280} className="md:col-span-3">
+            <article className="hover-lift group relative h-full overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card">
+              <div className="flex items-center justify-between">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <FileCheck2 className="h-5 w-5" />
+                </span>
+                <ArrowUpRight className="h-5 w-5 text-muted-foreground transition group-hover:text-primary" />
+              </div>
+              <h3 className="mt-5 font-display text-xl font-bold tracking-tight text-foreground">
+                Travel Documents Assistance
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                We assist with the processing and organization of essential travel documents,
+                including passports, invitation letters, supporting documents, and other
+                travel-related requirements. Our service ensures that clients are properly guided
+                and adequately prepared for their journeys.
               </p>
               <img
                 src={docsImg}
@@ -186,25 +228,6 @@ export function Services() {
                 height={576}
                 loading="lazy"
               />
-            </article>
-          </Reveal>
-
-          {/* Appointments */}
-          <Reveal delay={240} className="md:col-span-2">
-            <article className="hover-lift group relative h-full overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card">
-              <div className="flex items-center justify-between">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                  <CalendarClock className="h-5 w-5" />
-                </span>
-                <ArrowUpRight className="h-5 w-5 text-muted-foreground transition group-hover:text-primary" />
-              </div>
-              <h3 className="mt-5 font-display text-xl font-bold tracking-tight text-foreground">
-                Early Appointment Scheduling
-              </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Secure timely visa interview slots - even during peak season - without the
-                guesswork.
-              </p>
             </article>
           </Reveal>
         </div>

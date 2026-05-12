@@ -64,8 +64,8 @@ export function FAQ() {
         <div className="mx-auto mt-8 grid max-w-3xl gap-4 md:mt-10">
           {faqs.map((faq, i) => (
             <Reveal key={i} delay={i * 80}>
-              <details className="group rounded-xl border border-border bg-card p-5 shadow-card transition-all duration-300 open:border-primary-glow/40 open:shadow-lg">
-                <summary className="flex cursor-pointer items-center justify-between text-[15px] font-semibold text-foreground transition-colors group-hover:text-primary-glow md:text-base">
+              <details className="group rounded-xl border border-border bg-card p-4 md:p-5 shadow-card transition-all duration-300 open:border-primary-glow/40 open:shadow-lg">
+                <summary className="flex cursor-pointer items-center justify-between text-sm font-semibold text-foreground transition-colors group-hover:text-primary-glow md:text-base">
                   {faq.question}
                   <svg
                     className="ml-4 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-180 group-open:text-primary"
@@ -81,7 +81,7 @@ export function FAQ() {
                     />
                   </svg>
                 </summary>
-                <div className="mt-4 text-[13px] leading-relaxed text-muted-foreground md:text-sm">
+                <div className="mt-3 text-xs leading-relaxed text-muted-foreground md:mt-4 md:text-sm">
                   {faq.answer}
                 </div>
               </details>
