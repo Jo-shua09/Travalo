@@ -1,30 +1,47 @@
-const items = [
-  "UK Visa Approvals",
-  "Schengen Specialists",
-  "USA · B1/B2",
-  "Canada IRCC",
-  "Dubai · UAE",
-  "Australia Subclass 600",
-  "IATA Partner Carriers",
-  "Corporate Travel",
+const flags = [
+  { code: "🇺🇸", name: "United States" },
+  { code: "🇬🇧", name: "United Kingdom" },
+  { code: "🇨🇦", name: "Canada" },
+  { code: "🇩🇪", name: "Germany" },
+  { code: "🇫🇷", name: "France" },
+  { code: "🇮🇹", name: "Italy" },
+  { code: "🇪🇸", name: "Spain" },
+  { code: "🇳🇱", name: "Netherlands" },
+  { code: "🇧🇪", name: "Belgium" },
+  { code: "🇨🇭", name: "Switzerland" },
+  { code: "🇸🇪", name: "Sweden" },
+  { code: "🇳🇴", name: "Norway" },
+  { code: "🇩🇰", name: "Denmark" },
+  { code: "🇮🇪", name: "Ireland" },
+  { code: "🇵🇹", name: "Portugal" },
+  { code: "🇦🇹", name: "Austria" },
+  { code: "🇫🇮", name: "Finland" },
+  { code: "🇬🇷", name: "Greece" },
+  { code: "🇲🇽", name: "Mexico" },
+  { code: "🇧🇷", name: "Brazil" },
+  { code: "🇦🇷", name: "Argentina" },
+  { code: "🇨🇱", name: "Chile" },
 ];
 
 export function TrustBar() {
   return (
-    <section aria-label="Trusted by" className="border-y border-border bg-background py-6">
-      <div className="mx-auto w-[min(1200px,94%)]">
-        <p className="mb-4 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-          Trusted across visa categories worldwide
+    <section
+      aria-label="Visa approvals across countries"
+      className="border-y border-[color:var(--border-c)] bg-[color:var(--bg2)] py-8"
+    >
+      <div className="mx-auto max-w-[1280px] px-4 md:px-8">
+        <p className="mb-5 text-center font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--dim)]">
+          Approvals across Europe & the Americas
         </p>
-        <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
-          <div className="marquee whitespace-nowrap">
-            {[...items, ...items].map((it, i) => (
+        <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="marquee-track whitespace-nowrap">
+            {[...flags, ...flags].map((f, i) => (
               <span
                 key={i}
-                className="flex items-center gap-3 text-sm font-medium text-foreground/70"
+                className="inline-flex items-center gap-2.5 text-sm font-medium text-[color:var(--muted-fg)]"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-primary/60" />
-                {it}
+                <span className="text-2xl leading-none">{f.code}</span>
+                <span>{f.name}</span>
               </span>
             ))}
           </div>

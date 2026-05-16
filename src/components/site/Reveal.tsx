@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState, type ReactNode, type CSSProperties } from "react";
 
-type Props = { children: ReactNode; delay?: number; className?: string; as?: keyof HTMLElementTagNameMap };
+type Props = {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+  as?: keyof HTMLElementTagNameMap;
+};
 
 export function Reveal({ children, delay = 0, className = "", as = "div" }: Props) {
   const ref = useRef<HTMLElement | null>(null);
@@ -18,7 +23,7 @@ export function Reveal({ children, delay = 0, className = "", as = "div" }: Prop
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
     );
     io.observe(el);
     return () => io.disconnect();

@@ -1,93 +1,74 @@
-import { useEffect, useRef } from "react";
-import { ArrowRight, Sparkles, ShieldCheck } from "lucide-react";
-import heroGlobe from "@/assets/hero-globe.jpg";
+import { Star } from "lucide-react";
 
 export function Hero() {
-  const bgRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (!bgRef.current) return;
-      const y = Math.min(window.scrollY, 800);
-      bgRef.current.style.transform = `translate3d(0, ${y * 0.15}px, 0) scale(${1 + y * 0.0003})`;
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-background text-foreground">
-      <div ref={bgRef} className="absolute inset-0 -z-10 will-change-transform">
-        <img
-          src={heroGlobe}
-          alt=""
-          aria-hidden
-          className="h-full w-full object-cover opacity-20"
-          width={1536}
-          height={1280}
-        />
-      </div>
+    <section
+      id="top"
+      className="relative isolate overflow-hidden bg-[color:var(--bg)] pt-24 md:pt-28"
+    >
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 grid-bg" />
+      <div
+        aria-hidden
+        className="hero-glow-blob pointer-events-none absolute -top-20 left-0 -z-10 h-[500px] w-[500px] rounded-full"
+      />
 
-      <div className="mx-auto w-[min(1200px,92%)] pt-20 pb-20 md:pt-24 md:pb-28">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="mt-6 font-display text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-            <span className="block">Connecting Dreams,</span>
-            <span className="block text-primary">Simplifying Journeys.</span>
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-foreground md:text-lg">
-            Expert visa consulting and seamless flight arrangements designed for the modern
-            traveler. From your first appointment to take-off - handled with precision.
-          </p>
-
-          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a
-              href="#services"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.03] sm:w-auto"
-            >
-              Explore Services
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-border bg-background/50 px-6 py-3.5 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-card/70 sm:w-auto"
-            >
-              Get Started
-            </a>
+      <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-10 px-4 pb-20 md:grid-cols-2 md:gap-12 md:px-8 md:pb-24">
+        <div className="fade-up text-center md:text-left">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--border2)] bg-[color:var(--bg3)] py-1.5 pl-1.5 pr-4 text-xs text-[color:var(--muted-fg)]">
+            <span className="grid h-5 w-5 place-items-center rounded-full border border-[color:var(--lime-border)] bg-[color:var(--lime-dim)] text-[10px] text-[color:var(--lime)]">
+              <Star className="h-2.5 w-2.5 fill-current" />
+            </span>
+            500+ approvals · No agents. Ever.
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-muted-foreground">
-            <span className="inline-flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-primary-glow" /> 98% visa approval rate
-            </span>
-            <span className="hidden h-1 w-1 rounded-full bg-border sm:inline-block" />
-            <span>Trusted across Africa & beyond</span>
-            <span className="hidden h-1 w-1 rounded-full bg-border sm:inline-block" />
-            <span>Founded 2025 · Lagos, NG</span>
+          <h1 className="mt-6 text-balance font-display text-[clamp(2.1rem,5.5vw,3.6rem)] font-extrabold leading-[1.05] tracking-tight text-strong">
+            Your visa application deserves more than a{" "}
+            <span className="text-[color:var(--lime)]">lucky guess.</span>
+          </h1>
+
+          <p className="mx-auto mt-5 max-w-[440px] text-pretty text-[15px] leading-[1.8] text-[color:var(--muted-fg)] md:mx-0 md:text-base">
+            We don't just advise. We do it with you. From the first document to the final submission
+            - every step, no guesswork, no abandoned calls.
+          </p>
+
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-start md:items-start">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-lg bg-[color:var(--lime)] px-7 py-3.5 text-sm font-bold text-black [.light_&]:text-white transition hover:-translate-y-0.5"
+            >
+              Book Your Expert Visa Analysis →
+            </a>
+            <a
+              href="#process"
+              className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--border2)] bg-transparent px-6 py-3.5 text-sm font-medium text-strong transition hover:border-[color:var(--lime-border)] hover:text-[color:var(--lime)]"
+            >
+              See What's Covered
+            </a>
           </div>
         </div>
 
-        {/* Floating stat cards */}
-        <div className="mt-8 grid grid-cols-2 gap-3 md:mt-10 md:grid-cols-4 md:gap-4">
-          {[
-            { k: "1,000+", v: "Visas processed" },
-            { k: "60+", v: "Destinations" },
-            { k: "98%", v: "First-try approvals" },
-            { k: "24/7", v: "Client support" },
-          ].map((s, i) => (
-            <div
-              key={s.v}
-              className="floaty rounded-2xl border border-border bg-card p-4 text-left backdrop-blur md:p-5"
-              style={{ animationDelay: `${i * 0.4}s` }}
-            >
-              <div className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl">
-                {s.k}
-              </div>
-              <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground md:text-xs">
-                {s.v}
-              </div>
+        <div className="fade-up mx-auto w-full max-w-[340px] md:max-w-none">
+          <div
+            className="relative overflow-hidden rounded-2xl border border-[color:var(--border2)] bg-black shadow-deep"
+            style={{
+              aspectRatio: "1 / 1",
+              boxShadow:
+                "0 0 0 1px var(--lime-border), var(--shadow-deep), 0 0 60px var(--hero-glow)",
+            }}
+          >
+            <video
+              src="/media/video1.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="pointer-events-none absolute bottom-4 left-4 right-4 font-mono text-[11px] uppercase tracking-[0.15em] text-white/90">
+              <span className="rounded bg-black/50 px-2 py-1 backdrop-blur">
+                Travola · Client Approval
+              </span>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
