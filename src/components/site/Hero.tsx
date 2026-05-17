@@ -57,7 +57,7 @@ export function Hero() {
             }}
           >
             <video
-              src="/media/video1.mp4"
+              src="/media/intro.mov"
               controls
               playsInline
               preload="metadata"
