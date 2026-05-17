@@ -88,7 +88,7 @@ export function Testimonials() {
         <div className="mb-16">
           <Reveal>
             <h3 className="mb-6 flex items-center gap-2 font-display text-[17px] font-bold tracking-tight text-strong">
-              <span className="text-[color:var(--lime)]">▶</span> Video Testimonials — Approvals
+              <span className="text-[color:var(--lime)]">▶</span> Video Testimonials - Approvals
             </h3>
           </Reveal>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
