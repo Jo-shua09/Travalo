@@ -117,8 +117,11 @@ export function Testimonials() {
                   {r.quote}
                   <span className="text-[color:var(--lime)]">”</span>
                 </blockquote>
-                <figcaption className="mt-5 text-[13px] font-bold text-strong">
-                  - {r.name}
+                <figcaption className="mt-5 flex items-center justify-between text-[13px] font-bold text-strong">
+                  <span>- {r.name}</span>
+                  <span className="text-base leading-none" aria-label="United Kingdom">
+                    🇬🇧
+                  </span>
                 </figcaption>
               </figure>
             </Reveal>
