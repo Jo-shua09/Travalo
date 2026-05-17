@@ -63,11 +63,11 @@ export function Hero() {
               preload="metadata"
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="pointer-events-none absolute bottom-4 left-4 right-4 font-mono text-[11px] uppercase tracking-[0.15em] text-white/90">
+            {/* <div className="pointer-events-none absolute bottom-4 left-4 right-4 font-mono text-[11px] uppercase tracking-[0.15em] text-white/90">
               <span className="rounded bg-black/50 px-2 py-1 backdrop-blur">
                 Travola · Client Approval
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
