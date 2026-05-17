@@ -1,6 +1,15 @@
 import { Reveal } from "./Reveal";
 
-const videos = ["/media/video1.mp4", "/media/video2.mp4", "/media/video3.mp4", "/media/video4.mp4"];
+const videos = [
+  "/media/video1.mp4",
+  "/media/video2.mp4",
+  "/media/video3.mp4",
+  "/media/video4.mov",
+  "/media/video5.mov",
+  "/media/video6.mov",
+  "/media/video7.mov",
+  "/media/video8.mov",
+];
 
 const reviews = [
   {
