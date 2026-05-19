@@ -183,7 +183,7 @@ export function Testimonials() {
 
         <div
           ref={reviewsContainerRef}
-          className="hide-scrollbar mt-6 grid snap-x py-5 snap-mandatory grid-flow-col auto-cols-full gap-4 overflow-x-hidden sm:auto-cols-[calc(50%-8px)] lg:auto-cols-[calc(33.333%-11px)]"
+          className="hide-scrollbar mt-6 grid snap-x py-5 snap-mandatory grid-flow-col auto-cols-[100%] gap-4 overflow-x-hidden sm:auto-cols-[calc(50%-8px)] lg:auto-cols-[calc(33.333%-11px)]"
         >
           {reviews.map((r, i) => (
             <Reveal key={r.name} delay={(i % 3) * 60} className="snap-center sm:snap-start">
