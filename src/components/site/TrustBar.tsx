@@ -1,34 +1,36 @@
+import React from "react";
+
+// Updated with standard lowercase 2-letter ISO country codes
 const flags = [
-  { code: "🇺🇸", name: "United States" },
-  { code: "🇬🇧", name: "United Kingdom" },
-  { code: "🇨🇦", name: "Canada" },
-  { code: "🇩🇪", name: "Germany" },
-  { code: "🇫🇷", name: "France" },
-  { code: "🇮🇹", name: "Italy" },
-  { code: "🇪🇸", name: "Spain" },
-  { code: "🇳🇱", name: "Netherlands" },
-  { code: "🇧🇪", name: "Belgium" },
-  { code: "🇨🇭", name: "Switzerland" },
-  { code: "🇸🇪", name: "Sweden" },
-  { code: "🇳🇴", name: "Norway" },
-  { code: "🇩🇰", name: "Denmark" },
-  { code: "🇮🇪", name: "Ireland" },
-  { code: "🇵🇹", name: "Portugal" },
-  { code: "🇦🇹", name: "Austria" },
-  { code: "🇫🇮", name: "Finland" },
-  { code: "🇬🇷", name: "Greece" },
-  { code: "🇲🇽", name: "Mexico" },
-  { code: "🇧🇷", name: "Brazil" },
-  { code: "🇦🇷", name: "Argentina" },
-  { code: "🇿🇦", name: "South Africa" },
-  { code: "🇪🇬", name: "Egypt" },
-  { code: "🇰🇪", name: "Kenya" },
-  { code: "🇬🇭", name: "Ghana" },
-  { code: "🇲🇦", name: "Morocco" },
-  { code: "🇷🇼", name: "Rwanda" },
-  { code: "🇲🇺", name: "Mauritius" },
-  { code: "🇸🇪", name: "Sweden" },
-  { code: "🇨🇱", name: "Chile" },
+  { code: "us", name: "United States" },
+  { code: "gb", name: "United Kingdom" },
+  { code: "ca", name: "Canada" },
+  { code: "de", name: "Germany" },
+  { code: "fr", name: "France" },
+  { code: "it", name: "Italy" },
+  { code: "es", name: "Spain" },
+  { code: "nl", name: "Netherlands" },
+  { code: "be", name: "Belgium" },
+  { code: "ch", name: "Switzerland" },
+  { code: "se", name: "Sweden" },
+  { code: "no", name: "Norway" },
+  { code: "dk", name: "Denmark" },
+  { code: "ie", name: "Ireland" },
+  { code: "pt", name: "Portugal" },
+  { code: "at", name: "Austria" },
+  { code: "fi", name: "Finland" },
+  { code: "gr", name: "Greece" },
+  { code: "mx", name: "Mexico" },
+  { code: "br", name: "Brazil" },
+  { code: "ar", name: "Argentina" },
+  { code: "za", name: "South Africa" },
+  { code: "eg", name: "Egypt" },
+  { code: "ke", name: "Kenya" },
+  { code: "gh", name: "Ghana" },
+  { code: "ma", name: "Morocco" },
+  { code: "rw", name: "Rwanda" },
+  { code: "mu", name: "Mauritius" },
+  { code: "cl", name: "Chile" },
 ];
 
 export function TrustBar() {
@@ -46,9 +48,15 @@ export function TrustBar() {
             {[...flags, ...flags].map((f, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2.5 text-sm font-medium text-[color:var(--muted-fg)]"
+                className="inline-flex items-center gap-3 text-sm font-medium text-[color:var(--muted-fg)] mr-12"
               >
-                <span className="text-2xl leading-none">{f.code}</span>
+                {/* High-quality vector flag source from FlagCDN */}
+                <img
+                  src={`https://flagcdn.com/${f.code}.svg`}
+                  alt={`${f.name} Flag`}
+                  className="h-4 w-6 object-cover rounded-sm shadow-sm"
+                  loading="lazy"
+                />
                 <span>{f.name}</span>
               </span>
             ))}
