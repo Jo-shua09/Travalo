@@ -119,12 +119,10 @@ export function Services() {
                     <span className="grid h-10 w-10 place-items-center rounded-lg border border-[color:var(--border2)] bg-[color:var(--bg3)] text-[color:var(--lime)]">
                       <Icon className="h-5 w-5" />
                     </span>
-                    <h3 className="mt-5 font-display text-[15px] font-bold tracking-tight text-strong">
+                    <h3 className="mt-5 font-display text-[15px] font-bold tracking-tight text-white">
                       {title}
                     </h3>
-                    <p className="mt-2 text-[13px] leading-[1.7] text-[color:var(--muted-fg)]">
-                      {desc}
-                    </p>
+                    <p className="mt-2 text-[13px] leading-[1.7] text-zinc-300">{desc}</p>
                   </div>
                 </article>
               </Reveal>
