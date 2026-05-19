@@ -44,7 +44,7 @@ export function TrustBar() {
           Approvals across Different Countries
         </p>
         <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          <div className="marquee-track whitespace-nowrap [animation-duration:30s]">
+          <div className="marquee-track whitespace-nowrap [animation-duration:15s]">
             {[...flags, ...flags].map((f, i) => (
               <span
                 key={i}
