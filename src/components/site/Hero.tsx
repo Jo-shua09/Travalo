@@ -106,7 +106,7 @@ export function Hero() {
             <div className="flex flex-col gap-4 w-full sm:w-auto sm:flex-row">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[color:var(--lime)] px-7 py-3.5 text-sm font-bold text-black transition hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[color:var(--lime)] px-7 py-3.5 text-sm font-bold text-black [.light_&]:text-white transition hover:-translate-y-0.5"
               >
                 Book Your Expert Visa Analysis →
               </a>
