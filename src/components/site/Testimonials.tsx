@@ -126,16 +126,28 @@ export function Testimonials() {
               <span className="text-[color:var(--lime)]">▶</span> Video Testimonials - Approvals
             </h3>
           </Reveal>
-          <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-            <div className="marquee-track flex">
+          <div className="relative overflow-x-hidden hide-scrollbar [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+            <div className="marquee-track flex w-max [animation-duration:40s] hover:[animation-play-state:paused] group/track">
               {[...videos, ...videos].map((vid, i) => (
-                <div key={i} className="w-[320px] shrink-0 p-[5px] sm:w-[360px]">
+                <div key={i} className="w-[280px] shrink-0 p-[5px] sm:w-[320px]">
                   <video
                     src={vid}
+                    onPlay={(e) =>
+                      (e.currentTarget.closest(".marquee-track") as HTMLElement)?.style.setProperty(
+                        "animation-play-state",
+                        "paused",
+                      )
+                    }
+                    onPause={(e) =>
+                      (e.currentTarget.closest(".marquee-track") as HTMLElement)?.style.setProperty(
+                        "animation-play-state",
+                        "running",
+                      )
+                    }
                     controls
                     playsInline
                     preload="metadata"
-                    className="block w-full rounded-xl border border-[color:var(--border-c)] bg-black shadow-deep"
+                    className="block w-full aspect-[1/1] rounded-xl border border-[color:var(--border-c)] bg-black shadow-deep"
                   />
                 </div>
               ))}
@@ -171,7 +183,7 @@ export function Testimonials() {
 
         <div
           ref={reviewsContainerRef}
-          className="hide-scrollbar mt-6 grid snap-x py-5 snap-mandatory grid-flow-col auto-cols-[90%] gap-4 overflow-x-hidden sm:auto-cols-[calc(50%-8px)] lg:auto-cols-[calc(33.333%-11px)]"
+          className="hide-scrollbar mt-6 grid snap-x py-5 snap-mandatory grid-flow-col auto-cols-full gap-4 overflow-x-hidden sm:auto-cols-[calc(50%-8px)] lg:auto-cols-[calc(33.333%-11px)]"
         >
           {reviews.map((r, i) => (
             <Reveal key={r.name} delay={(i % 3) * 60} className="snap-center sm:snap-start">
