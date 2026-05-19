@@ -2,13 +2,12 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const features = [
-  "Travel documents assistance",
-  "Student admission",
-  "Hotel booking",
-  "Travel insurance",
-  "Flight ticketing",
-  "Visa consultation",
-  "Visa Processing",
+  "Comprehensive visa profile assessment",
+  "Country eligibility and rist evaluation for the UK, Canada & Schengen states",
+  "Detailed bank statement and supporting document review",
+  "Transparent guidance; apply now, strengthen your profile, or consider an alternative route",
+  "Professional analysis of previous visa refusals (where applicable)",
+  "Personalized action plan delivered directly via whatsApp",
 ];
 
 export function Pricing() {
@@ -56,8 +55,8 @@ export function Pricing() {
               </div>
 
               <p className="mb-6 text-[14.5px] leading-[1.7] text-[color:var(--text)]">
-                Gerald reviews every aspect of your profile and gives you a clear action plan - not
-                vague advice.
+                Travola carefully reviews every part of your profile and provides a tailored,
+                practical action plan not just generic advice.
               </p>
 
               <div className="mb-8">
