@@ -48,7 +48,7 @@ export function TrustBar() {
             {[...flags, ...flags].map((f, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-3 text-sm font-medium text-[color:var(--muted-fg)] mr-12"
+                className="inline-flex items-center gap-3 text-sm font-medium text-[color:var(--muted-fg)] mr-6"
               >
                 {/* High-quality vector flag source from FlagCDN */}
                 <img
