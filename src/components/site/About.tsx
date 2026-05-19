@@ -47,10 +47,10 @@ export function About() {
         <Reveal delay={120}>
           <div className="grid grid-cols-2 gap-3">
             {[
-              { k: "500+", v: "Approvals" },
-              { k: "98%", v: "First-try rate" },
-              { k: "60+", v: "Destinations" },
-              { k: "24/7", v: "Support" },
+              { k: "300+", v: "Approvals" },
+              { k: "98%", v: "Quality Service" },
+              { k: "20+", v: "Destinations" },
+              { k: "24/7", v: "Support Team" },
             ].map((s) => (
               <div
                 key={s.v}

@@ -20,6 +20,14 @@ const flags = [
   { code: "🇲🇽", name: "Mexico" },
   { code: "🇧🇷", name: "Brazil" },
   { code: "🇦🇷", name: "Argentina" },
+  { code: "🇿🇦", name: "South Africa" },
+  { code: "🇪🇬", name: "Egypt" },
+  { code: "🇰🇪", name: "Kenya" },
+  { code: "🇬🇭", name: "Ghana" },
+  { code: "🇲🇦", name: "Morocco" },
+  { code: "🇷🇼", name: "Rwanda" },
+  { code: "🇲🇺", name: "Mauritius" },
+  { code: "🇸🇪", name: "Sweden" },
   { code: "🇨🇱", name: "Chile" },
 ];
 
@@ -31,10 +39,10 @@ export function TrustBar() {
     >
       <div className="mx-auto max-w-[1280px] px-4 md:px-8">
         <p className="mb-5 text-center font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--dim)]">
-          Approvals across Europe & the Americas
+          Approvals across Different Countries
         </p>
         <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          <div className="marquee-track whitespace-nowrap">
+          <div className="marquee-track whitespace-nowrap [animation-duration:30s]">
             {[...flags, ...flags].map((f, i) => (
               <span
                 key={i}

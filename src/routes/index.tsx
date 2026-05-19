@@ -38,9 +38,8 @@ function Index() {
       <Navbar />
       <Hero />
       <TrustBar />
-      <Process />
       <Services />
-      <About />
+      <Process />
       <Pricing />
       <Testimonials />
       <FAQ />

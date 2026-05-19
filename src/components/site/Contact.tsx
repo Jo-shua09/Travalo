@@ -16,7 +16,7 @@ const items = [
     value: "info@travolaglobalconsults.com",
     href: "mailto:info@travolaglobalconsults.com",
   },
-  { icon: Clock, label: "Hours", value: "Mon – Fri · 9:00 AM – 6:00 PM" },
+  { icon: Clock, label: "Hours", value: "Mon – Fri · 9:00 AM – 4:00 PM" },
 ];
 
 export function Contact() {

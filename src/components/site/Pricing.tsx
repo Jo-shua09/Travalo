@@ -2,13 +2,13 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const features = [
-  "Full 9-point Expert Visa Analysis of your profile",
-  "Country risk assessment - UK, Canada, Schengen",
-  "Bank statement & document review",
-  "Honest verdict - apply now, wait, or switch",
-  "Past refusal decoding (if applicable)",
-  "Action plan sent via WhatsApp",
-  "1 month to return with follow-up questions",
+  "Travel documents assistance",
+  "Student admission",
+  "Hotel booking",
+  "Travel insurance",
+  "Flight ticketing",
+  "Visa consultation",
+  "Visa Processing",
 ];
 
 export function Pricing() {
@@ -28,7 +28,7 @@ export function Pricing() {
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-4 text-[15px] leading-[1.8] text-[color:var(--muted-fg)]">
-              A single 60-minute session gives you a complete, honest picture of where your
+              A single 30-minute session gives you a complete, honest picture of where your
               application stands - and exactly what to do next.
             </p>
           </Reveal>
@@ -44,16 +44,13 @@ export function Pricing() {
                   <h3 className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-strong">
                     <span className="text-[color:var(--lime)]">⭐</span> Expert Visa Analysis
                   </h3>
-                  <p className="mt-1 text-[13.5px] text-[color:var(--muted-fg)]">
-                    60-Minute Deep Dive
-                  </p>
                 </div>
                 <div className="text-left md:text-right">
                   <div className="font-display text-3xl font-extrabold text-[color:var(--lime)]">
-                    ₦100,000
+                    ₦39,999
                   </div>
                   <p className="mt-1 text-[12px] text-[color:var(--muted-fg)]">
-                    60 mins · 1 month validity
+                    30 mins · 1 month validity
                   </p>
                 </div>
               </div>

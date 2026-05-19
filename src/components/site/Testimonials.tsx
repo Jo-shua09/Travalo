@@ -1,4 +1,6 @@
+import { useRef, useState, useEffect } from "react";
 import { Reveal } from "./Reveal";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const videos = [
   "/media/video1.mp4",
@@ -69,6 +71,39 @@ const reviews = [
 ];
 
 export function Testimonials() {
+  const reviewsContainerRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const scrollReviews = (direction: "left" | "right") => {
+    if (reviewsContainerRef.current) {
+      const scrollAmount = reviewsContainerRef.current.clientWidth;
+      reviewsContainerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  useEffect(() => {
+    const el = reviewsContainerRef.current;
+    const checkScrollability = () => {
+      if (el) {
+        setCanScrollLeft(el.scrollLeft > 0);
+        setCanScrollRight(Math.ceil(el.scrollLeft) < el.scrollWidth - el.clientWidth);
+      }
+    };
+    if (el) {
+      checkScrollability();
+      el.addEventListener("scroll", checkScrollability, { passive: true });
+      window.addEventListener("resize", checkScrollability);
+      return () => {
+        el.removeEventListener("scroll", checkScrollability);
+        window.removeEventListener("resize", checkScrollability);
+      };
+    }
+  }, []);
+
   return (
     <section id="testimonials" className="bg-[color:var(--bg)] py-14 md:py-20">
       <div className="mx-auto max-w-[1280px] px-4 md:px-8">
@@ -91,33 +126,56 @@ export function Testimonials() {
               <span className="text-[color:var(--lime)]">▶</span> Video Testimonials - Approvals
             </h3>
           </Reveal>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {videos.map((vid, i) => (
-              <Reveal key={vid} delay={i * 60}>
-                <div className="relative overflow-hidden rounded-2xl border border-[color:var(--border-c)] bg-black shadow-deep">
+          <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+            <div className="marquee-track flex">
+              {[...videos, ...videos].map((vid, i) => (
+                <div key={i} className="w-[320px] shrink-0 p-[5px] sm:w-[360px]">
                   <video
                     src={vid}
                     controls
                     playsInline
                     preload="metadata"
-                    className="block w-full"
+                    className="block w-full rounded-xl border border-[color:var(--border-c)] bg-black shadow-deep"
                   />
                 </div>
-              </Reveal>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
-        <Reveal>
-          <h3 className="mb-6 flex items-center gap-2 font-display text-[17px] font-bold tracking-tight text-strong">
-            <span className="text-[color:var(--lime)]">✍️</span> Written Reviews
-          </h3>
-        </Reveal>
+        <div className="flex flex-wrap items-center justify-between gap-y-4">
+          <Reveal>
+            <h3 className="flex items-center gap-2 font-display text-[17px] font-bold tracking-tight text-strong">
+              <span className="text-[color:var(--lime)]">✍️</span> Written Reviews
+            </h3>
+          </Reveal>
+          <div className="flex gap-2">
+            <button
+              onClick={() => scrollReviews("left")}
+              disabled={!canScrollLeft}
+              aria-label="Scroll left"
+              className="grid h-9 w-9 place-items-center rounded-lg border border-[color:var(--border2)] bg-[color:var(--bg3)] text-[color:var(--muted-fg)] transition hover:text-strong disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              <ArrowLeft className="h-4 w-4" />
+            </button>
+            <button
+              onClick={() => scrollReviews("right")}
+              disabled={!canScrollRight}
+              aria-label="Scroll right"
+              className="grid h-9 w-9 place-items-center rounded-lg border border-[color:var(--border2)] bg-[color:var(--bg3)] text-[color:var(--muted-fg)] transition hover:text-strong disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          ref={reviewsContainerRef}
+          className="hide-scrollbar mt-6 grid snap-x py-5 snap-mandatory grid-flow-col auto-cols-[90%] gap-4 overflow-x-hidden sm:auto-cols-[calc(50%-8px)] lg:auto-cols-[calc(33.333%-11px)]"
+        >
           {reviews.map((r, i) => (
-            <Reveal key={r.name} delay={(i % 3) * 60}>
-              <figure className="h-full rounded-xl border border-[color:var(--border-c)] bg-[color:var(--card-bg)] p-6 transition-transform duration-300 ease-out will-change-transform hover:-translate-y-1 hover:scale-[1.035] hover:border-[color:var(--lime-border)] hover:shadow-deep">
+            <Reveal key={r.name} delay={(i % 3) * 60} className="snap-center sm:snap-start">
+              <figure className="h-full rounded-xl border border-[color:var(--border-c)] bg-[color:var(--card-bg)] p-6 transition-colors hover:border-[color:var(--lime-border)]">
                 <div className="font-mono text-[13px] tracking-[2px] text-[color:var(--lime)]">
                   ★★★★★
                 </div>

@@ -224,6 +224,15 @@
     transform: none;
   }
 
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    display: none; /* Chrome, Safari, Opera */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
   .marquee-track {
     display: flex;
     gap: 3rem;
