@@ -140,7 +140,7 @@ export function Hero() {
                 <div className="font-display text-4xl font-extrabold tracking-tight text-[color:var(--lime)] group-hover:scale-105 transition-transform duration-300 origin-left">
                   {s.k}
                 </div>
-                <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] text-[color:var(--muted-fg)]">
+                <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] text-white [.light_&]:text-black">
                   {s.v}
                 </div>
               </div>
