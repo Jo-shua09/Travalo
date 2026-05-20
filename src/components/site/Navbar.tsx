@@ -6,9 +6,9 @@ import logoWhite from "@/assets/travola-logo-white.png";
 const links = [
   { href: "#process", label: "Process" },
   { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
   { href: "#pricing", label: "Pricing" },
   { href: "#testimonials", label: "Reviews" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];
 
