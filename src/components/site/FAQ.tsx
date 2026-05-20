@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What countries do you process visas for?",
-    a: "We cover a wide range of destinations including the UK, USA, Canada, Schengen countries, Australia, UAE and many others. Reach out and we will confirm eligibility for your specific destination.",
+    a: "We cover a wide range of destinations including the UK, USA, Canada, Schengen countries, Australia, African Countries and many others. Reach out and we will confirm eligibility for your specific destination.",
   },
   {
     q: "How do I get started?",

@@ -48,9 +48,7 @@ export function Pricing() {
                   <div className="font-display text-3xl font-extrabold text-[color:var(--lime)]">
                     ₦39,999
                   </div>
-                  <p className="mt-1 text-[12px] text-[color:var(--muted-fg)]">
-                    30 mins · 1 month validity
-                  </p>
+                  <p className="mt-1 text-[16px] text-[color:var(--muted-fg)]">30 mins</p>
                 </div>
               </div>
 

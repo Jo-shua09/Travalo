@@ -75,7 +75,7 @@ export function Services() {
         <div className="mb-14 max-w-[640px]">
           <Reveal>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--lime-border)] bg-[color:var(--lime-dim)] px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-[color:var(--lime)]">
-              Services
+              Our Services
             </span>
           </Reveal>
           <Reveal delay={80}>

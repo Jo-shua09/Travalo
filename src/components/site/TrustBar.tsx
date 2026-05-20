@@ -41,7 +41,7 @@ export function TrustBar() {
     >
       <div className="mx-auto max-w-[1280px] px-4 md:px-8">
         <p className="mb-5 text-center font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--dim)]">
-          Approvals across Different Countries
+          Visa processing destinations
         </p>
         <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="marquee-track whitespace-nowrap [animation-duration:15s]">

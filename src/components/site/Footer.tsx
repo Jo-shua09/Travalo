@@ -37,7 +37,7 @@ export function Footer() {
           {[
             {
               icon: TiktokIcon,
-              href: "https://www.tiktok.com/@travolaglobalconsult",
+              href: "https://www.tiktok.com/@travolaglobalconsults?_r=1&_t=ZS-96XuX5nrfUW",
               label: "TikTok",
               color: "text-white bg-black",
             },

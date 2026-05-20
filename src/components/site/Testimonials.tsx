@@ -7,7 +7,7 @@ const videos = [
   "/media/video2.mp4",
   "/media/video3.mp4",
   "/media/video4.mov",
-  "/media/video5.mov",
+  "/media/video9.mov",
   "/media/video6.mov",
   "/media/video7.mov",
   "/media/video8.mov",
@@ -188,20 +188,23 @@ export function Testimonials() {
           {reviews.map((r, i) => (
             <Reveal key={r.name} delay={(i % 3) * 60} className="snap-center sm:snap-start">
               <figure className="h-full rounded-xl border border-[color:var(--border-c)] bg-[color:var(--card-bg)] p-6 transition-colors hover:border-[color:var(--lime-border)]">
-                <div className="font-mono text-[13px] tracking-[2px] text-[color:var(--lime)]">
+                <div className="font-mono text-[16px] tracking-[2px] text-[color:var(--lime)]">
                   ★★★★★
                 </div>
-                <blockquote className="mt-4 text-[13.5px] font-light italic leading-[1.75] text-[color:var(--muted-fg)]">
+                <blockquote className="mt-4 text-[13.5px] font-light italic leading-[1.75] text-[color:var(--text)]">
                   <span className="text-[color:var(--lime)]">“</span>
                   {r.quote}
                   <span className="text-[color:var(--lime)]">”</span>
+                  <figcaption className="mt-5 flex items-center justify-between text-[13px] font-bold text-strong">
+                    <span>- {r.name}</span>
+                    <img
+                      src="https://flagcdn.com/gb.svg"
+                      alt="United Kingdom Flag"
+                      className="h-4 w-6 object-cover rounded-sm shadow-sm"
+                      loading="lazy"
+                    />
+                  </figcaption>
                 </blockquote>
-                <figcaption className="mt-5 flex items-center justify-between text-[13px] font-bold text-strong">
-                  <span>- {r.name}</span>
-                  <span className="text-base leading-none" aria-label="United Kingdom">
-                    🇬🇧
-                  </span>
-                </figcaption>
               </figure>
             </Reveal>
           ))}
