@@ -63,7 +63,7 @@ export function Hero() {
         {SLIDES.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 bg-cover bg-center bg-top-right transition-opacity duration-1000 ease-in-out ${
               index === currentSlide ? "opacity-60" : "opacity-0"
             }`}
             style={{
