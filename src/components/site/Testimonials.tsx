@@ -8,7 +8,7 @@ const videos = [
   "/media/video3.mp4",
   "/media/video4.mov",
   "/media/video9.mov",
-  "/media/video6.mov",
+  "/media/video10.mov",
   "/media/video7.mov",
   "/media/video8.mov",
 ];
